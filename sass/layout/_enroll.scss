@@ -1,0 +1,62 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.enroll {
+  padding: 80px;
+
+  @include breakpoint(md) {
+    padding: 40px;
+  }
+
+  &__row {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__col {
+    &-1 {
+      flex-basis: 50%;
+    }
+
+    &-2 {
+      flex-basis: 42%;
+      & h2 {
+        margin-bottom: 0px;
+      }
+
+      & p {
+        margin: 10% 0px;
+
+        & span {
+          font-size: 1.2em;
+          color: $tertiary;
+        }
+      }
+
+      & a {
+        width: fit-content;
+      }
+    }
+
+    & img {
+      width: 100%;
+      @include breakpoint(sm) {
+        width: 80%;
+      }
+    }
+  }
+  &__box {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+}

@@ -1,0 +1,71 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.contact {
+  padding: 80px;
+  text-align: center;
+  background: $primary-dark;
+  color: $white;
+
+  @include breakpoint(md) {
+    padding: 40px;
+  }
+
+  &__row {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__col {
+    flex-basis: 46%;
+
+    & form {
+      & input,
+      textarea {
+        font-size: 16px;
+        font-family: inherit;
+        border: none;
+        border-radius: 10px;
+        background-color: $white;
+        margin-bottom: 20px;
+        padding: 20px;
+        width: 100%;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &__box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    & span {
+      @include breakpoint(sm) {
+        margin-bottom: 40px;
+      }
+    }
+
+    & span:last-child {
+      margin-bottom: 40px;
+    }
+
+    & .fa {
+      font-size: 50px;
+    }
+
+    & p {
+      margin-top: 20px;
+    }
+  }
+}

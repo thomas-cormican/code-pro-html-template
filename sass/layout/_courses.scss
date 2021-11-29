@@ -1,0 +1,40 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.courses {
+  padding: 80px;
+  background-color: $primary-light;
+  text-align: center;
+
+  @include breakpoint(md) {
+    padding: 40px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+
+    @include breakpoint(md) {
+      flex-direction: column;
+    }
+  }
+
+  &__col {
+    flex-basis: 30%;
+    flex: 1;
+
+    @include breakpoint(md) {
+      margin-bottom: 80px;
+    }
+
+    & img {
+      height: 150px;
+    }
+
+    & p {
+      padding: 0px 30px;
+    }
+  }
+}

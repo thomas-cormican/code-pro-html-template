@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.button {
+  text-decoration: none;
+  padding: 12px;
+  color: $primary-medium;
+  background: transparent;
+  border: 1px solid $primary-medium;
+  transition: 0.5s;
+
+  &:hover {
+    background: $primary-medium;
+    color: $white;
+  }
+
+  &-white {
+    color: $white;
+    border: 1px solid $white;
+
+    &:hover {
+      background: $white;
+      color: $primary-dark;
+    }
+  }
+}

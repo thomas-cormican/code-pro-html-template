@@ -1,0 +1,73 @@
+@import "../abstracts/variables";
+
+.about {
+  padding: 80px;
+  text-align: center;
+
+  @include breakpoint(md) {
+    padding: 40px;
+  }
+
+  &__box {
+    padding: 20px;
+  }
+
+  & img {
+    width: 100%;
+
+    @include breakpoint(sm) {
+      width: 50%;
+    }
+  }
+
+  & span {
+    padding: 40px;
+  }
+
+  & h3 {
+    margin-top: 0px;
+  }
+
+  & p {
+    color: $grey;
+  }
+
+  &__row {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+    }
+
+    &-1 {
+      & .about__col {
+        &-1 {
+          flex-basis: 35%;
+        }
+        &-2 {
+          flex-basis: 55%;
+          text-align: left;
+        }
+      }
+    }
+    &-2 {
+      border-top: 1px solid $primary-lightest;
+      border-bottom: 1px solid $primary-lightest;
+      margin: 25px auto;
+      padding: 25px 0px;
+
+      & .about__col {
+        &-1 {
+          flex-basis: 55%;
+          text-align: right;
+        }
+        &-2 {
+          flex-basis: 35%;
+        }
+      }
+    }
+  }
+}

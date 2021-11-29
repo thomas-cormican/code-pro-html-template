@@ -1,0 +1,126 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  z-index: 100;
+
+  &__logo {
+    text-decoration: none;
+    color: $black;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  & .fas {
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+
+    @include breakpoint(md) {
+      display: inline-block;
+    }
+  }
+
+  & .far {
+    font-size: 28px;
+    display: none;
+    float: right;
+    cursor: pointer;
+  }
+
+  &__content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 200px;
+  }
+
+  &__links {
+    list-style: none;
+    @include breakpoint(md) {
+      position: fixed;
+      height: 100vh;
+      background: $primary-medium;
+      right: -100%;
+      color: white;
+      top: 0px;
+      width: 50%;
+      padding: 50px 6%;
+      transition: 0.5s;
+    }
+
+    &.slide-in {
+      right: 0px;
+
+      & .far {
+        display: block;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin: 20px;
+
+    @include breakpoint(md) {
+      display: block;
+    }
+
+    &:nth-of-type(1) {
+      @include breakpoint(md) {
+        margin-top: 50px;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 0%;
+      height: 2px;
+      background: $primary;
+      transition: 0.5s;
+
+      @include breakpoint(md) {
+        display: none;
+      }
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    & a {
+      text-decoration: none;
+      color: $primary-dark;
+
+      @include breakpoint(md) {
+        color: $white;
+      }
+
+      &:hover {
+        color: $primary-light;
+      }
+    }
+  }
+
+  &__close {
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    left: 0px;
+    display: none;
+
+    &.show {
+      display: inline-block;
+    }
+  }
+}
