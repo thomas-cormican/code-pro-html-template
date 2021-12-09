@@ -16,7 +16,7 @@
     max-width: 1200px;
     margin: auto;
 
-    @include breakpoint(md) {
+    @media (max-width: 850px) {
       flex-direction: column;
     }
   }
@@ -25,7 +25,7 @@
     flex-basis: 30%;
     flex: 1;
 
-    @include breakpoint(md) {
+    @media (max-width: 850px) {
       margin-bottom: 80px;
     }
 

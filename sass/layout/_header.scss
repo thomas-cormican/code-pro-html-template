@@ -47,12 +47,22 @@
     color: $black;
     @include center;
 
+    @media (max-width: 500px) {
+      padding: 20px;
+    }
+
     & h1 {
       @media (max-height: 480px) {
         font-size: 2rem;
       }
       & span {
         color: $primary;
+      }
+    }
+
+    &__break {
+      @media (max-width: 480px) {
+        display: none;
       }
     }
 

@@ -83,11 +83,17 @@ h3 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    @media (max-width: 500px) {
+      .header__text {
+        padding: 20px; } }
     @media (max-height: 480px) {
       .header__text h1 {
         font-size: 2rem; } }
     .header__text h1 span {
       color: #0466c8; }
+    @media (max-width: 480px) {
+      .header__text__break {
+        display: none; } }
     .header__text p {
       margin: 15px 0px 40px 0px; }
       @media (max-height: 480px) {
@@ -135,13 +141,13 @@ h3 {
     justify-content: space-between;
     max-width: 1200px;
     margin: auto; }
-    @media (max-width: 780px) {
+    @media (max-width: 850px) {
       .courses__row {
         flex-direction: column; } }
   .courses__col {
     flex-basis: 30%;
     flex: 1; }
-    @media (max-width: 780px) {
+    @media (max-width: 850px) {
       .courses__col {
         margin-bottom: 80px; } }
     .courses__col img {
